@@ -34,3 +34,7 @@
 
 # YouTube Video
 [![ML_week3](https://img.youtube.com/vi/8S1x9a7ZtY8/0.jpg)](https://www.youtube.com/watch?v=8S1x9a7ZtY8)
+
+# Demo chatbot
+[Click here to chat with our bot](https://Desktop-Db.kalesha.repl.co)
+
