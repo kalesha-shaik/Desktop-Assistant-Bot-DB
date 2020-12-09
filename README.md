@@ -18,6 +18,8 @@
 - Hangman game is most interesting part of desktop-assistant bot.
 - In this game,the user needs to find the correct programming language within 6 guesses.If he fails to find the answer,he lost the game.
 - With the help of intents trained our bot can able to understand natural language and can proceed further to the commands that are given.
+- Our chatbot also includes a tiny database. If the user have an account , he can just Log In. Else create a new account.
+- If the username and password matches to the values in the databse , he or she can login successfully.
 
 
 # Output Demo Screenshot
