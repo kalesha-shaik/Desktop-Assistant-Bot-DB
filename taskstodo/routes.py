@@ -8,12 +8,12 @@ def configure_bot_routes(app):
     @app.route("/")
     @saferequest()
     def greet(*args,**kwargs):
-        from .data.about import bot #controller
+        ##from .data.about import bot #controller
         name = None
         if kwargs.get('session',None):
             name=kwargs['session'].name
 
-        return render_template('index.html',title='Home',data=bot,name=name)
+        return render_template('login.html',title='Home',data=bot,name=name)
     
     @app.route('/summary')
     @saferequest()
@@ -56,23 +56,5 @@ def configure_bot_routes(app):
             from .intents import handle
             kwargs.update(request.form)
             return handle(*args,**kwargs)
-        else:
-            return ''
-
-    @app.route('/addtodo',methods=['POST'])
-    @saferequest
-    def addtodo(*args,**kwargs):
-        if 'session' not in kwargs:
-            return "Login required",401
-
-        if request.method == 'POST':
-            userid=kwargs['session'].userid
-            task = request.form['task']
-            due = request.form['due']
-            created = request.form['created']
-            priority=int(request.form['priority'])
-
-            Todo.create(userid=userid,task=task,due=due,priority=priority)
-            return  render_template('messages/newtask.html')
         else:
             return ''
